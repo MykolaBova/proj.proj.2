@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "83a0d90a-4c4a-4fd8-969f-dedc7153eecb",
+		"name": "DropIt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "postDelivery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"address\":\"Khreshatyk 4\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/deliveries",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deliveries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postDelivery 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":3,\n\t\"address\":\"Khreshatyk 5\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/deliveries",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deliveries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postPackage",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"tag\":\"Some tag 1\",\n\t\"delivery\" : {\n\t\t\"id\" : 4\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/packages",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"packages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAll Deliviries",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"address\":\"Khreshatyk 4\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080//deliveries",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"deliveries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAll Deliviry by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"address\":\"Khreshatyk 4\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080//deliveries/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"deliveries",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
